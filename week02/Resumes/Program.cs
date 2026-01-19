@@ -16,14 +16,13 @@ class Program
         job2._jobTitle = "Quality tester";
         job2._company = "Apple";
         job2._startYear = "2020";
-        job1._endYear = "2025";
-        //displays Job method
-        job1.Display();
+        job2._endYear = "2025";
         //create new instance
         Resume myResume = new Resume();
         myResume._name = "Mary";
         myResume._jobs.Add(job1);
         myResume._jobs.Add(job2);
-
+        //displays resume method
+        myResume.Display();
     }
 }
