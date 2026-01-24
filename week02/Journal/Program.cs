@@ -56,9 +56,6 @@ class Program
             }
         }
 
-        // Exceeding core requirements idea (example):
-        // - You could add "Search entries" by keyword, or "Mood rating (1-5)" stored in Entry.
-        // - If you add features, describe them here in comments for rubric credit.
     }
 
     static void WriteNewEntry(Journal journal, PromptGenerator promptGenerator)
