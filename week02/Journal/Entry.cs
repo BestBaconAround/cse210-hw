@@ -13,8 +13,6 @@ public class Entry
         _entryText = entryText;
     }
 
-    // These read-only properties let Journal save/load cleanly
-    // without exposing member variables directly.
     public string Date => _date;
     public string PromptText => _promptText;
     public string EntryText => _entryText;
