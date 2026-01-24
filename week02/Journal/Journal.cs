@@ -28,14 +28,12 @@ public class Journal
 
     public void SaveToFile(string file)
     {
-        // Using a safe separator to avoid CSV quoting complexity
         string separator = "~|~";
 
         using (StreamWriter writer = new StreamWriter(file))
         {
             foreach (Entry entry in _entries)
             {
-                // Date ~|~ Prompt ~|~ EntryText
                 writer.WriteLine($"{entry.Date}{separator}{entry.PromptText}{separator}{entry.EntryText}");
             }
         }
@@ -66,14 +64,12 @@ public class Journal
 
             if (parts.Length < 3)
             {
-                // If line is corrupted or old format, skip it
                 continue;
             }
 
             string date = parts[0];
             string prompt = parts[1];
 
-            // In case entry text contains the separator somehow, re-join the rest
             string entryText = string.Join(separator, parts, 2, parts.Length - 2);
 
             Entry entry = new Entry(date, prompt, entryText);
