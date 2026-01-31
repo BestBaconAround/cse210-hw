@@ -12,7 +12,6 @@ public class Scripture
         _reference = reference;
         _words = new List<Word>();
 
-        // Simple split by spaces. Each token becomes a Word (punctuation stays attached).
         string[] tokens = text.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
         foreach (string token in tokens)
@@ -30,7 +29,6 @@ public class Scripture
 
     public void HideRandomWords(int countToHide, Random rng)
     {
-        // Stretch behavior: pick only from words not already hidden.
         List<int> visibleIndexes = new List<int>();
 
         for (int i = 0; i < _words.Count; i++)
@@ -46,7 +44,6 @@ public class Scripture
             return;
         }
 
-        // Hide up to countToHide, but not more than what is available.
         int hides = Math.Min(countToHide, visibleIndexes.Count);
 
         for (int i = 0; i < hides; i++)
@@ -56,7 +53,6 @@ public class Scripture
 
             _words[wordIndex].Hide();
 
-            // Remove so we do not hide the same word twice in a single round.
             visibleIndexes.RemoveAt(pick);
         }
     }
