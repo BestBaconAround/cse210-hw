@@ -7,7 +7,6 @@ public class Reference
     private int _startVerse;
     private int _endVerse;
 
-    // Constructor for a single verse: "John 3:16"
     public Reference(string book, int chapter, int verse)
     {
         _book = book;
@@ -16,7 +15,6 @@ public class Reference
         _endVerse = verse;
     }
 
-    // Constructor for a verse range: "Proverbs 3:5-6"
     public Reference(string book, int chapter, int startVerse, int endVerse)
     {
         _book = book;

@@ -5,11 +5,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        // EXCEEDS CORE REQUIREMENTS (creativity):
-        // 1) Multiple scriptures are available and one is randomly selected at program start.
-        // 2) A progress indicator shows how many words are hidden (percent) each round.
-        // Both features are fully functional.
-
         List<Scripture> scriptures = BuildScriptureLibrary();
         Random rng = new Random();
 
@@ -33,7 +28,6 @@ class Program
 
             if (scripture.IsCompletelyHidden())
             {
-                // Final display requirement: show the scripture fully hidden, then end.
                 Console.Clear();
                 Console.WriteLine(scripture.GetDisplayText());
                 Console.WriteLine();
@@ -43,15 +37,12 @@ class Program
                 break;
             }
 
-            // Hide a few random words each round.
-            // You can tweak this number for difficulty.
             scripture.HideRandomWords(countToHide: 3, rng);
         }
     }
 
     private static List<Scripture> BuildScriptureLibrary()
     {
-        // You can add more scriptures here easily.
         return new List<Scripture>
         {
             new Scripture(
