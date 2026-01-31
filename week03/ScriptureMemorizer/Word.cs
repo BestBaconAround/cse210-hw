@@ -29,8 +29,6 @@ public class Word
             return _text;
         }
 
-        // Hide letters with underscores, keep punctuation as-is.
-        // This guarantees the number of underscores matches the number of letters.
         StringBuilder builder = new StringBuilder();
 
         foreach (char c in _text)
