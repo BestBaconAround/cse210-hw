@@ -1,0 +1,7 @@
+Abstraction is the principle of designing a developer’s code so you can interact with an object through purposeful methods without directly messing with its internal data. It hides the unnecessary data and exposes only what you need to use the thing correctly. The benefit is that your code becomes easier to maintain and it is easier to change later. If the internal code changes, the rest of the program doesn’t have to. For example, the Journal program, Program should not touch the journal private list of entries. Instead, it is called AddEntry() and DisplayAll(). That keeps the list protected and keeps the entries stored. As the Journal’s job is not everyone’s.
+Journal journal = new Journal();
+Entry entry = new Entry(Date, prompt, response);
+//Abstraction: use Journal behavior, not its internal list
+journal.AddEntry(entry);
+journal.DisplayAll();
+//Bad design would be: journal._entries.Add(entry); this breaks abstraction.
