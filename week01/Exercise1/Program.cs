@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        //Asks the user for their name!
+        //Asks the user for their epic name!
         Console.Write("What is your first name? ");
         string fname = Console.ReadLine();
 
