@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        //get user's grade
+        //get user's grade!
         Console.WriteLine("What is your grade? ");
         string userGrade = Console.ReadLine();
         //user grade

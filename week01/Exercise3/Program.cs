@@ -4,7 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        //user guess starts at -1 for loop
+        //user guess starts at -1 for loop!
         int numGuess = -1;
         //computer creates a random number
         Random rng = new();

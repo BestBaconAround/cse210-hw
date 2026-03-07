@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-// asks the user for a list of numbers
+// asks the user for a list of numbers!
         List<int> numbers = new();
         int sum = 0;
         while (true)

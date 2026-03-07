@@ -10,7 +10,7 @@ class Program
         int square = SquareNumber(userNumber);
         DisplayResult(userName, square);
     }
-        //greets the user
+        //greets the user!
         static void DisplayWelcome()
         {
             Console.WriteLine("Welcome to the program!");
