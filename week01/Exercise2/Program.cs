@@ -4,27 +4,24 @@ class Program
 {
     static void Main(string[] args)
     {
-        //get user's grade!
-        Console.WriteLine("What is your grade? ");
-        string userGrade = Console.ReadLine();
-        //user grade
-        int grade = int.Parse(userGrade);
-        //creates the letter grade
-        string letter;
-        //checks grade and outputs letter
-        if (grade >= 90)
+      Console.WriteLine("What is your grade: ");
+      string grade = Console.ReadLine();
+      int userGrade = int.Parse(grade);
+      string letter;
+
+      if (userGrade >= 90)
         {
             letter = "A";
         }
-        else if (grade >= 80)
+        else if (userGrade >= 80)
         {
             letter = "B";
         }
-        else if (grade >= 70)
+        else if (userGrade >= 70)
         {
             letter = "C";
         }
-        else if (grade >= 60)
+        else if (userGrade >= 60)
         {
             letter = "D";
         }
@@ -32,14 +29,15 @@ class Program
         {
             letter = "F";
         }
-        //checks if the user passes or fails the class
-        if (grade >= 70)
+
+        if (userGrade >= 70)
         {
-            Console.WriteLine($"You Passed the course with a {letter}!");
+            Console.WriteLine($"You have a passing grade of {letter}");
         }
         else
         {
-            Console.WriteLine("Don't give up! Study harder and try again!");
+            Console.WriteLine($"You failed with a {letter} grade!");
         }
+
     }
 }

@@ -5,3 +5,4 @@ Entry entry = new Entry(Date, prompt, response);
 journal.AddEntry(entry);
 journal.DisplayAll();
 //Bad design would be: journal._entries.Add(entry); this breaks abstraction.
+//

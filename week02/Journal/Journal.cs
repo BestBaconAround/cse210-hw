@@ -25,7 +25,7 @@ public class Journal
             Console.WriteLine();
         }
     }
-
+//
     public void SaveToFile(string file)
     {
         string separator = "~|~";

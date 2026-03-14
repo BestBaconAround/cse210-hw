@@ -70,7 +70,7 @@ class Program
 
         Entry newEntry = new Entry(date, prompt, response);
         journal.AddEntry(newEntry);
-
+//
         Console.WriteLine("Entry added.");
     }
 }
